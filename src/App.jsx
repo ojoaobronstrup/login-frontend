@@ -9,6 +9,13 @@ function App() {
         <Route path="/" element={
           <>
             <Cadastro />
+            <GlobalStyles />
+          </>
+        }>
+        </Route>
+        <Route path="/login" element={
+          <>
+            <h1>Ola mundo</h1>
           </>
         }>
         </Route>
