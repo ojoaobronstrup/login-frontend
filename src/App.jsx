@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import GlobalStyles from "./components/GlobalStyles"
 import Cadastro from "./pages/Cadastro"
+import Login from "./pages/Login"
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         </Route>
         <Route path="/login" element={
           <>
-            <h1>Ola mundo</h1>
+            <Login />
           </>
         }>
         </Route>
