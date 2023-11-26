@@ -48,6 +48,12 @@ const Botao = styled.h2`
     justify-content: center;
     border-radius: 10px;
 `
+const TagLink = styled(Link)`
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    line-height: auto;
+`
 
 function Login () {
     const [emailLogin, setEmailLogin] = useState("");
@@ -66,12 +72,18 @@ function Login () {
                     </InputsArea>
                         <Botao onClick={async () => {
                             const resposta = await buscaUsuario(emailLogin);
-                            if(resposta.senha == senhaLogin) {
+                            if(resposta.email == emailLogin && resposta.senha == senhaLogin) {
                                 return window.location.pathname = "/entrar"
-                            } else {
+                            } else if (resposta.email == emailLogin && resposta.senha != senhaLogin) {
                                 alert("Senha incorreta!")
                             }
+                            else {
+                                return alert(resposta)
+                            };
                         }}>Entrar</Botao>
+                    <TagLink to="/">
+                        <h4>Não tem uma conta?</h4>
+                    </TagLink>
                 </CadastrarUsuario>     
                 <CampoIlustrativo>
                     <img src="/pessoas-cadastro.svg" alt="Logo pessoas" />    

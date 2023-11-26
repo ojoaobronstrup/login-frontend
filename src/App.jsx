@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import GlobalStyles from "./components/GlobalStyles"
 import Cadastro from "./pages/Cadastro"
 import Login from "./pages/Login"
+import Inicio from "./pages/Inicio"
 
 function App() {
   return (
@@ -19,6 +20,13 @@ function App() {
             <Login />
           </>
         }>
+        </Route>
+        <Route path="/entrar" element={
+          <>
+            <Inicio />
+          </>
+        }>
+
         </Route>
       </Routes>
     </>
