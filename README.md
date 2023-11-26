@@ -8,6 +8,8 @@
   * Styled Components
   * React Router Dom
 
+![Página de registro de novos usuários](/registrar.jpeg)
+
 Obs.: Backend / API: https://github.com/ojoaobronstrup/login-backend 
 
 ------------------------------------------------
