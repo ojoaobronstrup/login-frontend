@@ -1,3 +1,16 @@
+# Login Frontend
+> ## SOBRE
+  * Frontend de um sistema de login e cadastro de usuários.
+
+> ## TECNOLOGIAS UTILIZADAS
+  * JavaScript
+  * React
+  * Styled Components
+  * React Router Dom
+
+
+------------------------------------------------
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
