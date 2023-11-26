@@ -8,6 +8,7 @@
   * Styled Components
   * React Router Dom
 
+Obs.: Backend / API: https://github.com/ojoaobronstrup/login-backend 
 
 ------------------------------------------------
 
