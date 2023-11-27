@@ -81,7 +81,7 @@ function Cadastro () {
                 </CadastrarUsuario>     
                 <CampoIlustrativo>
                     <img src="/pessoas-cadastro.svg" alt="Logo pessoas" />    
-                </CampoIlustrativo>          
+                </CampoIlustrativo>
             </Corpo>
         </>
     )
