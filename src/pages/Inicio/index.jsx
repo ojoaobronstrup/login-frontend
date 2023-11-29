@@ -1,24 +1,54 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Corpo = styled.div`
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: scale(10);
+    flex-direction: column;
+    gap: 15px;
 `
-const Imagem = styled.img`
+const Horario = styled.h1`
+    font-size: 50px;
+    font-weight: bold;
+`
+const Botao = styled.button`
+    background-color: black;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0;
     cursor: pointer;
 `
 
 function Inicio () {
+    const [segundos, setSegundos] = useState(new Date().getSeconds());
+    const [minutos, setMinutos] = useState(new Date().getMinutes());
+    const [horas, setHoras] = useState(new Date().getHours());
+    const [dia, setDia] = useState(new Date().getDate());
+    const [mes, setMes] = useState(new Date().getMonth());
+    const [ano, setAno] = useState(new Date().getFullYear());
+    
+    useEffect(() => {
+       setInterval(() => {
+            setSegundos(new Date().getSeconds());
+            setMinutos(new Date().getMinutes());
+            setHoras(new Date().getHours());
+        }, 1000);
+        setDia(new Date().getDate());
+        setMes(new Date().getMonth()+1);
+        setAno(new Date().getFullYear());
+    }, []);
+
     return (
         <>
             <Corpo>
-                <Imagem src="/simbolo-confirmacao.svg" alt="Logo de confirmação" onClick={() => {
-                    return window.location.pathname = "/";
-                }}/>
+                <h2>{dia}/{mes}/{ano}</h2>
+                <Horario>{horas}:{minutos}:{segundos}</Horario>
+                <Botao>Marcar Ponto</Botao>
             </Corpo>
         </>
     )

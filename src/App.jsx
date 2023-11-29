@@ -18,12 +18,14 @@ function App() {
         <Route path="/login" element={
           <>
             <Login />
+            <GlobalStyles />
           </>
         }>
         </Route>
         <Route path="/entrar" element={
           <>
             <Inicio />
+            <GlobalStyles />
           </>
         }>
 

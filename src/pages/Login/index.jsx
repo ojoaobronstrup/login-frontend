@@ -47,6 +47,7 @@ const Botao = styled.h2`
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    margin-bottom: 10px;
 `
 const TagLink = styled(Link)`
     text-decoration: none;
