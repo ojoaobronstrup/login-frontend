@@ -48,7 +48,12 @@ function Inicio () {
             <Corpo>
                 <h2>{dia}/{mes}/{ano}</h2>
                 <Horario>{horas}:{minutos}:{segundos}</Horario>
-                <Botao>Marcar Ponto</Botao>
+                <Botao onClick={()=> {
+                    return (
+                        alert("Ponto marcado com sucesso!"),
+                        setInterval(()=> {window.location.pathname = "/"}, 1000)
+                    )
+                }}>Marcar Ponto</Botao>
             </Corpo>
         </>
     )
